@@ -17,10 +17,10 @@ def num_gen():
 
 points = 0
 answers = True
+cp1 = data[num_gen()]
 while answers :
   print(logo)
-  rand_choice = (random.randint(1,len(data)))
-  cp1 = data[num_gen()]
+  
   
   name = (f"Compare A: {cp1['name']}, a {cp1['description']}, from {cp1['country']}.")
   followers = cp1['follower_count']
@@ -45,6 +45,7 @@ while answers :
       answers = False
     else:
       points = gain()
+      cp1 = cp2
       clear()
       print(f"Points: {points}")
   elif choice == 'B':
@@ -53,6 +54,7 @@ while answers :
       answers = False
     else:
       points = gain()
+      cp1 = cp2
       clear()
       print(f"Points: {points}")
     
